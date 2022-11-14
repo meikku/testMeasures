@@ -31,7 +31,7 @@ public class Inch extends Length {
 	 * Return true if the other object is measured in Inch and with the same value.
 	 */
 	public boolean equals(Object o) {
-		return super.equals(o) && (o instanceof Length);
+		return super.equals(o) && (o instanceof Inch); // CHANGED Length -> Inch
 	}
 
 }

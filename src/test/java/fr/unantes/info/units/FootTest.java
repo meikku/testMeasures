@@ -20,6 +20,18 @@ public class FootTest {
 	}
 
 	@Test
+	public void testToFoot() {
+		Foot foot = new Foot(1);
+		assertEquals(new Foot(1), foot.toFoot());
+	}
+	
+	public void testMeterToFoot() {
+		Meter m = new Meter(0.3048);
+		Foot foot = new Foot(1);
+		assertEquals(m.toFoot(), foot);
+	}
+	
+	@Test
 	public void testToInch() {
 		Foot f = new Foot(1);
 		Length i = new Inch(12);
@@ -38,6 +50,11 @@ public class FootTest {
 		Foot f1 = new Foot(1);
 		Foot f2 = new Foot(2);
 		assertNotEquals(f2, f1);
+	}
+	
+	@Test
+	public void equals() {
+        assertNotEquals(new Foot(1), new Inch(1.0));
 	}
 
 }

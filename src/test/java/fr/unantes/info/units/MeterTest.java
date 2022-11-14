@@ -46,4 +46,10 @@ public class MeterTest {
         Meter m2 = new Meter(2);
         assertNotEquals(m2, m1);
     }
+    
+    @Test
+    public void testToMeter() {
+        Meter m1 = new Meter(1);
+        assertEquals(new Meter(1), m1.toMeter());
+    }
 }
