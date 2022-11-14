@@ -24,7 +24,7 @@ public class Litre extends Volume {
 	 */
 	@Override
 	public boolean equals(Object o) {
-		return super.equals(o);
+		return super.equals(o) && (o instanceof Litre); // ADDED second condition
 	}
 
 }

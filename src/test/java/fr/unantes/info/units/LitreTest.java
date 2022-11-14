@@ -15,10 +15,23 @@ public class LitreTest {
 	}
 	
 	@Test
+	public void testToGallonNotNull() {
+		Litre litre = new Litre(4.546);
+		Gallon gallon = new Gallon(1);
+		assertNotEquals(litre.toGallon(), null);
+	}
+	
+	@Test
 	public void testToLitre() {
 		Litre litre = new Litre(4.546);
 		Gallon gallon = new Gallon(1);
 		assertEquals(gallon.toLitre(), litre);
+	}
+	
+	@Test
+	public void testToLitreNotEqualToNull() {
+		Gallon gallon = new Gallon(1);
+		assertNotEquals(gallon.toLitre(), null);
 	}
 	
 	@Test
@@ -35,6 +48,7 @@ public class LitreTest {
 		assertNotEquals(null, litre); 			// litre.equals(null);
 		assertEquals(litre, litre); 			// litre.equals(litre);
 		assertNotEquals(new Litre(10), litre); 	// litre.equals(new Litre(10));
+		assertNotEquals(new Litre(1), new Inch(1));
 	}
 
 }

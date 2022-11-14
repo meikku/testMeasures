@@ -53,6 +53,12 @@ public class FootTest {
 	}
 	
 	@Test
+	public void testGetValue() {
+		Foot f1 = new Foot(1);
+		assertEquals(new Foot(1).getValue(), f1.getValue());
+	}
+	
+	@Test
 	public void equals() {
         assertNotEquals(new Foot(1), new Inch(1.0));
 	}

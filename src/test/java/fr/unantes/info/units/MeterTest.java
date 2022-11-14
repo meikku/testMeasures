@@ -12,6 +12,11 @@ public class MeterTest {
         assertNotEquals(m1, new Inch(1.0));
 
     }
+    
+    @Test
+    public void testNotEqualsNull() {
+        assertNotEquals(m1, null);
+    }
 
     @Test
     public void testAdd() {
@@ -19,6 +24,12 @@ public class MeterTest {
         assertEquals(new Meter(0), m0.add(m0));
     }
 
+    @Test
+    public void testAddMeter() {
+        Meter m2 = new Meter(1);
+        assertEquals(new Meter(2), m1.add(m2));
+    }
+    
     @Test
     public void testConvertMeters2Foot() {
         Foot foot = new Foot(1);
@@ -45,6 +56,13 @@ public class MeterTest {
         Meter m1 = new Meter(1);
         Meter m2 = new Meter(2);
         assertNotEquals(m2, m1);
+    }
+    
+    @Test
+    public void testFootNotEqualsMeter() {
+        Meter m1 = new Meter(1);
+        Foot f1 = new Foot(1);
+        assertNotEquals(m1, f1);
     }
     
     @Test

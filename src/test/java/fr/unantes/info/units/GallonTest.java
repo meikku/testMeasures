@@ -36,6 +36,12 @@ public class GallonTest {
 		Gallon g2 = new Gallon(2);
 		assertNotEquals(g2, g1);
 	}
+	
+	@Test
+	public void testGetValue() {
+		Gallon g1 = new Gallon(1);
+		assertEquals(new Gallon(1).getValue(), g1.getValue());
+	}
 
 	@Test
 	public void testEqualsToNull() {
