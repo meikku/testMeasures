@@ -1,3 +1,5 @@
+Measures was an exercise for the course Test logiciel (= Software testing) at Nantes University in the autumn 2022. The exercise consisted of reviewing and updating tests, learning to use JaCoCo for code coverage and PITest for mutation testing.
+
 = Measures
 
 Bibliothèque pour la représentation et la conversion d'unités de mesures physiques (volumes et longueurs).
